@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ranita Putri Handayani — Portofolio</title>
+<meta name="description" content="Portofolio Ranita Putri Handayani: Customer Relationship Management, analisis data & dashboard, dan UI/UX.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf8f5;--surface:#fff;--text:#1f2430;--muted:#6a7080;--accent:#c2410c;--accent-soft:#fdeee4;--line:#e8e3dc}
+@media (prefers-color-scheme:dark){:root{--bg:#14161b;--surface:#1c1f26;--text:#eceef3;--muted:#9aa1b0;--accent:#fb923c;--accent-soft:#2a2019;--line:#2b2f38}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;margin:0}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem;color:var(--text)}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:.92rem}
+nav ul a{color:var(--muted)}nav ul a:hover{color:var(--accent);text-decoration:none}
+section{padding:76px 0}
+.eyebrow{color:var(--accent);font-weight:600;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}
+h2{font-size:2rem;margin-bottom:28px}
+.hero{padding:90px 0 70px}
+.hero .wrap{display:grid;grid-template-columns:1.5fr 1fr;gap:44px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem);margin-bottom:16px}
+.hero p{color:var(--muted);font-size:1.08rem;max-width:520px}
+.btns{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.btn{padding:11px 22px;border-radius:999px;font-weight:600;font-size:.93rem;border:1px solid var(--accent)}
+.btn.primary{background:var(--accent);color:#fff}.btn.ghost{color:var(--accent)}.btn:hover{text-decoration:none;opacity:.88}
+.photo{width:100%;max-width:290px;aspect-ratio:3/4;object-fit:cover;border-radius:22px;justify-self:center;box-shadow:0 18px 40px rgba(0,0,0,.14)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px}
+.stat b{display:block;font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--accent)}
+.stat span{font-size:.85rem;color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px}
+.timeline{display:grid;gap:18px}
+.job-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.job-head h3{font-size:1.2rem}.job-head small{color:var(--muted)}
+.card ul{margin:10px 0 0;padding-left:20px;color:var(--muted)}.card li{margin-bottom:6px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.tag{background:var(--accent-soft);color:var(--accent);padding:5px 12px;border-radius:999px;font-size:.82rem;font-weight:500}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.proj-cat{margin:44px 0 16px;font-size:1.05rem;font-weight:600;color:var(--muted)}
+.case{display:grid;gap:22px}
+.case h3{font-size:1.55rem}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:6px 0}
+.meta div{font-size:.88rem;color:var(--muted)}.meta b{display:block;color:var(--text);font-weight:600}
+.fig{margin:0}.fig img{width:100%;border-radius:12px;border:1px solid var(--line);display:block}
+.fig figcaption{font-size:.82rem;color:var(--muted);margin-top:6px;text-align:center}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:600;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em}
+.tablewrap{overflow-x:auto}
+.bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden;min-width:90px}.bar i{display:block;height:100%;background:var(--accent)}
+.insight{background:var(--accent-soft);border-radius:12px;padding:14px 16px;font-size:.93rem}
+.skills .card h3{font-size:1.1rem;margin-bottom:4px}
+.contact{text-align:center}
+.contact p{color:var(--muted);max-width:520px;margin:0 auto 22px}
+footer{border-top:1px solid var(--line);padding:26px 0;text-align:center;color:var(--muted);font-size:.85rem}
+.reveal{opacity:0;transform:translateY(18px);transition:.6s}.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media (max-width:760px){
+ nav ul{gap:14px;font-size:.82rem}.logo{display:none}nav .wrap{justify-content:center}
+ .hero .wrap,.grid2{grid-template-columns:1fr}.photo{order:-1;max-width:210px}
+ .stats{grid-template-columns:1fr 1fr}section{padding:56px 0}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="#top">Ranita P.H.</a>
+  <ul>
+    <li><a href="#tentang">Tentang</a></li>
+    <li><a href="#pengalaman">Pengalaman</a></li>
+    <li><a href="#proyek">Proyek</a></li>
+    <li><a href="#skill">Skill</a></li>
+    <li><a href="#kontak">Kontak</a></li>
+  </ul>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <div>
+    <div class="eyebrow">Customer Relationship • Data • UI/UX</div>
+    <h1>Halo, saya Ranita Putri Handayani.</h1>
+    <p>Dua tahun pengalaman di Customer Relationship Management, administrasi data, dan pelaporan. Kini menempuh Digital Business dan membangun dashboard serta desain pengalaman pengguna yang rapi dan mudah dipahami.</p>
+    <div class="btns">
+      <a class="btn primary" href="#proyek">Lihat Proyek</a>
+      <a class="btn ghost" href="mailto:ranitaputr.handayani@gmail.com">Hubungi Saya</a>
+    </div>
+  </div>
+  <img class="photo" src="assets/foto.jpg" alt="Foto Ranita Putri Handayani">
+</div></header>
+
+<section id="tentang" style="padding-top:0"><div class="wrap">
+  <div class="stats reveal">
+    <div class="stat"><b>2 thn</b><span>Pengalaman CRM &amp; administrasi</span></div>
+    <div class="stat"><b>±Rp400 jt</b><span>Target penggalangan dana yang didukung</span></div>
+    <div class="stat"><b>20–30</b><span>Panggilan keluar per hari</span></div>
+    <div class="stat"><b>3</b><span>Proyek akademik UI/UX &amp; BI</span></div>
+  </div>
+  <div class="grid2" style="margin-top:44px">
+    <div class="reveal">
+      <div class="eyebrow">Tentang</div>
+      <h2>Teliti, responsif, dan suka merapikan data.</h2>
+    </div>
+    <div class="reveal">
+      <p style="color:var(--muted)">Saya terbiasa mengelola dan memperbarui data memakai Microsoft Excel dan Google Sheets, menyusun laporan berkala, serta menindaklanjuti pelanggan lewat komunikasi langsung. Saya mendukung proses administrasi secara akurat dan terstruktur.</p>
+      <p style="color:var(--muted)"><b style="color:var(--text)">Pendidikan:</b> Digital Business, Fakultas Ekonomi dan Bisnis, Cakrawala University (2025 – sekarang). Paket C (IPS), PKBM Melati, lulus 2019.</p>
+      <p style="color:var(--muted);margin-bottom:0"><b style="color:var(--text)">Bahasa:</b> Indonesia (native), Inggris (pemula).</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="pengalaman" style="background:var(--surface);border-block:1px solid var(--line)"><div class="wrap">
+  <div class="eyebrow">Pengalaman</div><h2>Riwayat kerja</h2>
+  <div class="timeline">
+    <div class="card reveal">
+      <div class="job-head"><h3>Resepsionis — Diandara Family Club</h3><small>Agustus 2026 – Sekarang</small></div>
+      <ul>
+        <li>Memantau dan mengoordinasikan jadwal janji temu harian, memastikan semua pemesanan tercatat dan diperbarui secara real-time.</li>
+        <li>Menyambut pelanggan yang datang langsung dengan sikap profesional dan ramah.</li>
+        <li>Menanggapi pertanyaan lewat WhatsApp dan media sosial, serta menindaklanjuti pesan yang belum terjawab.</li>
+      </ul>
+    </div>
+    <div class="card reveal">
+      <div class="job-head"><h3>Staff Customer Relationship Management — Yayasan ODOJ Untuk Negeri</h3><small>Juni 2024 – Juni 2026</small></div>
+      <ul>
+        <li>Memantau dan memperbarui data pelanggan dan donasi di Microsoft Excel dan Google Spreadsheet agar akurat dan lengkap.</li>
+        <li>Menyusun rekapitulasi data dan laporan bulanan untuk memantau program donasi.</li>
+        <li>Menangani lebih dari 100 chat masuk dan 20–30 panggilan keluar per hari untuk konfirmasi donasi dan tindak lanjut.</li>
+        <li>Menginput dan memverifikasi data donasi ke sistem pencatatan.</li>
+        <li>Mendukung kampanye donasi dengan menangani 50–100 chat pelanggan.</li>
+        <li>Mendukung target penggalangan dana program hingga sekitar Rp400 juta lewat pengelolaan data, komunikasi, dan tindak lanjut donatur.</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="proyek"><div class="wrap">
+  <div class="eyebrow">Proyek</div><h2>Karya pilihan</h2>
+
+  <article class="case card reveal">
+    <div>
+      <div class="tags" style="margin:0 0 10px"><span class="tag">UI/UX</span><span class="tag">Figma</span><span class="tag">Maze</span></div>
+      <h3>Smart Booking Flow — Redesign KAI Access</h3>
+    </div>
+    <div class="meta">
+      <div><b>Mata kuliah</b>Basics of UI/UX Design</div>
+      <div><b>Dosen</b>Hamzah Ramadhan, M.A.</div>
+      <div><b>Jenis</b>Proyek individu</div>
+    </div>
+    <p style="color:var(--muted);margin:0"><b style="color:var(--text)">Latar belakang.</b> KAI Access dipakai untuk memesan tiket kereta, tetapi proses booking masih bermasalah. Saya mendesain ulang alurnya agar lebih cepat, sederhana, dan nyaman.</p>
+    <div class="grid2">
+      <div>
+        <b>Permasalahan utama</b>
+        <ul style="color:var(--muted);margin:8px 0 0;padding-left:20px">
+          <li>Alur booking terlalu panjang.</li>
+          <li>Pengisian data penumpang berulang.</li>
+          <li>Tiket sering habis saat pembayaran.</li>
+          <li>Pesan error saat payment membingungkan.</li>
+        </ul>
+      </div>
+      <div>
+        <b>Hasil kuesioner pengguna</b>
+        <div class="tablewrap"><table>
+          <tr><td>Booking terlalu panjang</td><td>78%</td><td><div class="bar"><i style="width:78%"></i></div></td></tr>
+          <tr><td>Isi data kurang praktis</td><td>65%</td><td><div class="bar"><i style="width:65%"></i></div></td></tr>
+          <tr><td>Tiket habis saat bayar</td><td>62%</td><td><div class="bar"><i style="width:62%"></i></div></td></tr>
+          <tr><td>Error payment membingungkan</td><td>57%</td><td><div class="bar"><i style="width:57%"></i></div></td></tr>
+        </table></div>
+      </div>
+    </div>
+    <div class="grid2">
+      <figure class="fig"><img loading="lazy" src="assets/persona.jpg" alt="User persona Dinda Aulia"><figcaption>User persona: Dinda Aulia</figcaption></figure>
+      <figure class="fig"><img loading="lazy" src="assets/kuesioner.jpg" alt="Ringkasan hasil kuesioner"><figcaption>Ringkasan hasil kuesioner</figcaption></figure>
+      <figure class="fig"><img loading="lazy" src="assets/lowfi.jpg" alt="Low-fidelity prototype"><figcaption>Low-fidelity: 5 langkah pemesanan</figcaption></figure>
+      <figure class="fig"><img loading="lazy" src="assets/hifi.jpg" alt="High-fidelity prototype"><figcaption>High-fidelity: biru dan oranye untuk CTA</figcaption></figure>
+    </div>
+    <div>
+      <b>Usability testing (Maze) — 7 responden, 5 task</b>
+      <div class="tablewrap"><table>
+        <tr><th>Task</th><th>Success</th><th>Misclick</th><th>Durasi</th></tr>
+        <tr><td>Pencarian tiket</td><td>57,1%</td><td>91,1%</td><td>27,3 dtk</td></tr>
+        <tr><td>Menemukan tiket</td><td>100%</td><td>12,5%</td><td>8,4 dtk</td></tr>
+        <tr><td>Pilih jadwal</td><td>100%</td><td>12,5%</td><td>6,4 dtk</td></tr>
+        <tr><td>Isi data penumpang</td><td>100%</td><td>0%</td><td>5,6 dtk</td></tr>
+        <tr><td>Payment</td><td>100%</td><td>0%</td><td>6,0 dtk</td></tr>
+      </table></div>
+      <p class="insight">Insight: tahap pencarian tiket punya misclick tertinggi dan success rate terendah, jadi pengguna masih bingung di proses awal. Tahap lain berhasil diselesaikan 100% oleh semua responden.</p>
+    </div>
+    <div class="grid2">
+      <div><b>Pelajaran utama</b>
+        <ul style="color:var(--muted);margin:8px 0 0;padding-left:20px">
+          <li>Memahami user flow membantu merancang pengalaman yang terstruktur.</li>
+          <li>Data dan feedback pengguna menemukan masalah yang tidak terlihat dari asumsi.</li>
+          <li>Kesederhanaan dan konsistensi meningkatkan usability.</li>
+          <li>Iterasi berdasarkan feedback menghasilkan desain lebih baik.</li>
+        </ul></div>
+      <div><b>Tantangan</b>
+        <ul style="color:var(--muted);margin:8px 0 0;padding-left:20px">
+          <li>Memahami kebutuhan pengguna yang beragam.</li>
+          <li>Menyeimbangkan informasi lengkap dengan tampilan sederhana.</li>
+          <li>Menyesuaikan layout ke berbagai ukuran layar dan membagi waktu riset, desain, dan testing.</li>
+        </ul></div>
+    </div>
+    <div class="btns" style="margin:0">
+      <a class="btn primary" target="_blank" rel="noopener" href="https://www.figma.com/proto/I0db92u5qtspSc78Ed1lUg/Untitled?node-id=86-1155&p=f&t=op0I5YZ7r4Pbb7Bf-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=86%3A699">Prototype Figma</a>
+      <a class="btn ghost" target="_blank" rel="noopener" href="https://app.maze.co/report/Smart-Booking-Flow/10bfz7mozfmyf7/intro">Laporan Maze</a>
+      <a class="btn ghost" target="_blank" rel="noopener" href="https://drive.google.com/file/d/1lzvr9rlN9Qz7DtDnO6apxwu_LpSg9gOZ/view?usp=sharing">Presentasi (PDF)</a>
+    </div>
+  </article>
+
+  <div class="proj-cat">Business Intelligence (Mata kuliah, 2026)</div>
+  <div class="grid2">
+    <article class="card reveal">
+      <div class="tags" style="margin:0 0 10px"><span class="tag">Power BI</span></div>
+      <h3 style="font-size:1.25rem;margin-bottom:12px">Dashboard Analisis Transaksi Produk Bank</h3>
+      <figure class="fig" style="margin-bottom:14px">
+        <img loading="lazy" src="assets/dashboard-powerbi.png" alt="Dashboard Power BI analisis transaksi produk bank"
+             onerror="this.parentElement.innerHTML='<div class=&quot;insight&quot; style=&quot;text-align:center&quot;>Screenshot dashboard segera ditambahkan</div>'">
+        <figcaption>Dashboard Produk Bank (Power BI)</figcaption>
+      </figure>
+      <ul>
+        <li>Dashboard interaktif untuk data transaksi Januari–Maret 2025.</li>
+        <li>Line chart tren transaksi bulanan per produk dan bar chart jumlah transaksi, porsi transaksi, serta total nominal (Rp juta).</li>
+        <li>Kartu KPI jumlah transaksi dan total nominal, plus filter bulan.</li>
+        <li>Pemodelan data dengan tabel transaksi dan tabel dimensi.</li>
+      </ul>
+    </article>
+    <article class="card reveal">
+      <div class="tags" style="margin:0 0 10px"><span class="tag">Tableau</span></div>
+      <h3 style="font-size:1.25rem">Dashboard Analisis Data Media Sosial</h3>
+      <ul>
+        <li>Dashboard interaktif untuk mengeksplorasi performa media sosial.</li>
+        <li>Visualisasi metrik utama untuk mendukung analisis kinerja.</li>
+        <li>Laporan visual agar tren dan pola lebih mudah dipahami.</li>
+      </ul>
+      <div class="btns" style="margin-top:18px">
+        <a class="btn primary" target="_blank" rel="noopener" href="https://public.tableau.com/app/profile/ranita.putri.handayani/viz/SosialMediaData/Dashboard1?publish=yes">Buka di Tableau Public</a>
+      </div>
+    </article>
+  </div>
+</div></section>
+
+<section id="skill" style="background:var(--surface);border-block:1px solid var(--line)"><div class="wrap skills">
+  <div class="eyebrow">Keterampilan</div><h2>Yang saya kuasai</h2>
+  <div class="grid2">
+    <div class="card reveal"><h3>Hard skills</h3>
+      <div class="tags">
+        <span class="tag">Entri Data &amp; Administrasi</span><span class="tag">Monitoring &amp; Pelacakan Progres</span><span class="tag">Pencatatan &amp; Pengarsipan</span><span class="tag">Microsoft Word</span><span class="tag">Microsoft Excel</span><span class="tag">Microsoft PowerPoint</span><span class="tag">Google Workspace</span><span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">Figma</span><span class="tag">Canva</span>
+      </div></div>
+    <div class="card reveal"><h3>Soft skills</h3>
+      <div class="tags">
+        <span class="tag">Manajemen Waktu</span><span class="tag">Komunikasi</span><span class="tag">Tindak Lanjut &amp; Koordinasi</span><span class="tag">Pemecahan Masalah</span><span class="tag">Ketelitian</span><span class="tag">Kerja Sama Tim</span>
+      </div></div>
+  </div>
+</div></section>
+
+<section id="kontak" class="contact"><div class="wrap reveal">
+  <div class="eyebrow">Kontak</div>
+  <h2>Mari berkolaborasi</h2>
+  <p>Terbuka untuk peluang di bidang CRM, administrasi data, analisis data, dan UI/UX. Berdomisili di Pasar Minggu, Jakarta Selatan.</p>
+  <div class="btns" style="justify-content:center">
+    <a class="btn primary" href="mailto:ranitaputr.handayani@gmail.com">ranitaputr.handayani@gmail.com</a>
+    <!-- Ganti dengan link LinkedIn Anda: -->
+    <a class="btn ghost" target="_blank" rel="noopener" href="https://www.linkedin.com/in/USERNAME-ANDA">LinkedIn</a>
+  </div>
+</div></section>
+
+<footer>© <span id="yr">2026</span> Ranita Putri Handayani</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
